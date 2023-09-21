@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Operator</title>
+</head>
+<body>
+    <h1>Belajar Nullish</h1>
+    <h1 id="nullish"></h1>
+
+    <script>
+        // buat ngasih value ke variabel yang tipe datanya null atau undefined,jadi pas diakses walaupu variabelnya nullish,
+        // tapi bisa tetep ada valuenya
+
+        // versi panjang atau prosenya
+        // let nama;
+
+        // let data = nama;
+
+        // if(data === undefined || data === null){
+        //     data = "Ini jadi ada nilainya";
+        // }
+
+        // document.getElementById("nullish").innerHTML = data;
+
+        // versi sigkat menggunakan nullish coalescing operator
+        let a;
+        
+        // rumusnya -> variabel ?? "nilai atau valuenya"
+        let hasil = a ?? "Nilainya jadi ada";
+
+        document.getElementById("nullish").innerHTML = hasil;
+    </script>
+    
+</body>
+</html>

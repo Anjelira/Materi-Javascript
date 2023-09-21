@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #E19898;
+        }
+        h1{
+            text-align: center;
+        }
+        .card{
+            border: 2px transparent black;
+            border-radius: 20px;
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            padding-top: 50px;
+
+        }
+        img{
+            margin: auto;
+            padding-left: 40%;
+
+        }
+
+        #email{
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-left: 50px;
+            max-width: 200%;
+            width: 70%;        
+            padding: 10px ;
+        }
+
+        #password{
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-left: 50px;
+            max-width: 200%;
+            width: 70%;        
+            padding: 10px ;
+           
+        }
+        #button{
+            background: #FF6969;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-left: 50px;
+            max-width: 200%;
+            width: 75%;
+            padding: 10px ;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        #button:hover{
+            background-color: #7091F5;
+        }
+
+        #forget{
+            text-align: right;
+            margin-right: 50px;
+            margin-top: 1px;
+            color: #7091F5;
+            cursor: pointer;
+        }
+
+    
+    </style>
+    <body>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/58/a2/be/58a2bec02ecb40d12e507e2a212c46c6.jpg" alt="gambar" style="width: 20%;"/><br><br>
+            <h1>Login Instagram</h1>
+            <input type="email" required value="" id="email" placeholder="User ID"/><br><br>
+            <input type="password" required value="" id="password" placeholder="Password"/><br><br>
+            <p id="forget">Forgot Password ?</p>
+            <input onclick="Login()" type="button" value="Login" id="button"/>
+
+
+            <script>
+                var user = {
+                nama : "Anjeli",
+                email : "anjeli@gmail.com",
+                password : "0204",
+                role : "admin"
+            };
+            
+            function Login(){
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+             
+                console.log(email);
+                if(user.email == email){
+                    if(user.password == password){
+                        if(user.role == "admin"){
+                            alert("Selamat datang " + user.nama);
+                            window.location.href = "https://id.pinterest.com/";
+                        }
+                    }else{
+                        alert("Tidak Bisa Masuk");
+                    }
+                }else{
+                    alert("Bukan Admin");
+                }
+            }
+
+            </script>
+    
+        
+
+
+
+        </div>
+    
+            
+</body>
+</html>

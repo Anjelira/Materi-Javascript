@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data objek</title>
+</head>
+<style>
+
+    h1{
+        text-align: center;
+        color: palevioletred;
+    }
+    table{
+        margin: auto;
+        
+    }
+    th{
+        background-color: pink;
+    }
+</style>
+<body>
+    <h1>Data Penumpang</h1>
+    <table border="1">
+        <tr>
+            <th>Penumpang</th>
+            <th>Asal</th>
+            <th>Tujuan</th>
+            <th>Harga</th>
+            <th>Deskripsi</th>
+        </tr>
+        <tr>
+            <td id="Penumpang"></td>
+            <td id="Asal"></td>
+            <td id="Tujuan"></td>
+            <td id="Harga"></td>
+            <td id="Deskripsi"></td>
+        </tr>
+    </table>
+
+    <script>
+        var stasiun = {
+            Penumpang : "Anjeli",
+            Asal :"Tuban",
+            Tujuan :"Bogor",
+            Harga : "100000",
+            Deskripsi: function(){
+                return this.Penumpang + " dari " + this.Asal + " turun stasiun " + this.Tujuan
+            }
+
+
+        }
+
+        console.table([stasiun]);
+        // cara lain bukak di console itu var nya diganti const
+
+        document.getElementById("Penumpang").innerHTML = stasiun.Penumpang;
+        document.getElementById("Asal").innerHTML = stasiun.Asal;
+        document.getElementById("Tujuan").innerHTML = stasiun.Tujuan;
+        document.getElementById("Harga").innerHTML = stasiun.Harga;
+        document.getElementById("Deskripsi").innerHTML = stasiun.Deskripsi();
+    </script>
+</body>
+</html>
